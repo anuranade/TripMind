@@ -1,0 +1,21 @@
+# Web backend
+fastapi
+uvicorn[standard]
+jinja2
+
+# Core
+pydantic
+python-dotenv
+requests
+pandas
+
+# LLM / agent (used from Phase 3 onward)
+langchain
+langchain-core
+langchain-google-genai
+langgraph
+langgraph-checkpoint-sqlite
+
+# Testing
+pytest
+httpx

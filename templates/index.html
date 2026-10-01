@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ app_name }} — Intelligent Travel Planner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="brand">
+        <span class="brand-mark">T</span>
+        <div>
+          <div class="brand-name">{{ app_name }}</div>
+          <div class="brand-sub">Your intelligent travel planner</div>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <span id="status-pill" class="status-pill status-checking">Connecting…</span>
+        <button id="new-trip" class="btn-ghost" type="button">New trip</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Where are you headed?</h1>
+      <p class="hero-sub">Tell me your destination, dates, budget and interests.</p>
+      <div class="chips">
+        <button class="chip" type="button"
+          data-prompt="Plan a Jaipur trip from Mumbai from 10 Oct to 12 Oct for 2 people with a ₹25,000 budget. We like history and food. Budget is the priority.">
+          Jaipur from Mumbai · 3 days · ₹25k</button>
+        <button class="chip" type="button"
+          data-prompt="Me and my wife want to go from Pune to Lonavala this weekend, ₹15,000 total, hassle-free please, we love nature.">
+          Lonavala this weekend · nature</button>
+        <button class="chip" type="button" data-prompt="Plan a trip to Udaipur.">Plan a trip to Udaipur</button>
+      </div>
+    </section>
+
+    <section id="chat" class="chat" aria-live="polite"></section>
+    <section id="results" class="results" hidden></section>
+  </main>
+
+  <div class="composer-wrap">
+    <div class="container">
+      <form id="chat-form" class="composer" autocomplete="off">
+        <textarea id="chat-input" rows="1"
+          placeholder="Plan a 3-day Jaipur trip from Mumbai for 2 people under ₹25,000…"></textarea>
+        <button id="send-btn" type="submit" class="btn-primary">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

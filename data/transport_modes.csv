@@ -1,0 +1,6 @@
+mode,label,distance_basis,min_km,max_km,pricing,base_cost,cost_per_km,speed_kmh,overhead_hours,convenience,capacity,use_route_time,notes
+flight,Flight,air,300,15000,per_person,2500,3.5,700,3.5,8,1,False,Economy fare; time includes airport transfers and check-in; assumes both cities have airports
+train,Train (3AC),road,50,3000,per_person,150,1.5,60,1.0,7,1,False,3AC sleeper estimate; seat availability varies
+bus,Bus (AC sleeper),road,30,1500,per_person,100,1.4,50,0.5,5,1,False,Intercity AC bus estimate
+cab,Outstation cab,road,10,1000,per_vehicle,500,14,55,0.3,9,4,True,One-way outstation cab with driver (4 passengers per car)
+self_drive,Self-drive car,road,10,800,per_vehicle,0,9,55,0.5,5,5,True,Fuel and tolls only; car rental not included
